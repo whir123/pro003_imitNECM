@@ -1,0 +1,23 @@
+# https://editorconfig.org
+
+# EditorConfig 帮助开发团队在不同编辑器或 IDE 中维护一致的代码风格，尤其适用于多人协作的同一项目。
+# EditorConfig 项目包含两部分：
+# 文件格式：用于定义代码风格规则；
+# 编辑器插件集：让编辑器能够读取这些规则并自动应用。
+# EditorConfig 文件易于阅读，并能与版本控制系统（如 Git）完美配合
+
+root = true #表示这是项目的根 .editorconfig 文件
+# 如果有多个 .editorconfig 文件 编辑器会从当前目录向上查找 遇到 root = true 就停止查找
+# 后续父目录的配置不会再生效 这样可以防止父级目录的配置影响到你的项目
+
+[*] # 表示所有文件适用
+charset = utf-8 # 文件字符集
+indent_style = space # 缩进风格 tab/space
+indent_size = 2 # 缩进两个空格 选tab时不是必须参数
+end_of_line = lf # 换行类型 lf / cr / crlf（需插件支持）
+trim_trailing_whitespace = true # 去除行尾任意空白字符（需插件支持）
+insert_final_newline = true # 始终在文件末尾插入一个新行（需插件支持）
+
+[*.md] # 适用于md文件
+max_line_length = off # 不限制每行最大长度
+trim_trailing_whitespace = false # 不去除行尾任意空白字符（需插件支持）

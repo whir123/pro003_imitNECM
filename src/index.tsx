@@ -1,19 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from '@/App';
+// 希望用 @ 代表 src 目录
+// 1.eject暴露出来 2.[craco]：create-react-app config
+// npm install @craco/craco@alpha -D [alpha以支持新的脚手架]
+// 创建 src/craco.config.js
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // 删掉严格模式了
+  <App />,
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,20 +1,30 @@
+<!-- React项目的主HTML模板文件
+     整个应用的基础HTML页面 所有react组件最终都会渲染到这里
+     <div id="root"></div> 是 React 应用的挂载点
+     可以在这里引入 favicon、manifest、web 字体等静态资源
+     可以设置 <meta> 标签 定义网页描述、主题色等信息 有助于 SEO 和 PWA 支持 -->
+<!-- SEO（Search Engine Optimization，搜索引擎优化）
+     作用：通过优化网页内容和结构，提高网站在搜索引擎（如 Google、百度）中的排名，吸引更多自然流量
+     PWA（Progressive Web App，渐进式网页应用）
+     作用：让网页具备类似原生 App 的体验（离线可用、桌面安装、推送通知等） -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" /> <!-- 浏览器标签页小图标 -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />安装到手机桌面时的图标 -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> PWA配置文件 -->
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,10 +34,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>网易云音乐(仿)</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- 如果用户浏览器禁用了 JavaSript 会显示这段提示 -->
     <div id="root"></div>
     <!--
       This HTML file is a template.
