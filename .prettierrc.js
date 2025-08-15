@@ -11,3 +11,5 @@ module.exports = {
   trailingComma: 'all', // 多行对象/数组最后一项加逗号
   semi: true, // 语句末尾加分号
 };
+
+//设置里：Editor: Default Formatter --> Prettier - Code formatter

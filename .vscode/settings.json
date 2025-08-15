@@ -1,0 +1,34 @@
+{
+  // 默认格式化工具 指定默认格式化器为 Prettier（esbenp 的扩展）
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 保存时自动格式化
+  // 保存时自动运行默认格式化器（如果 language-specific 覆盖了会以覆盖后的为准）
+  "editor.formatOnSave": true,
+  // ESLint 检查的文件类型 告诉 ESLint 插件哪些语言要用 ESLint 校验
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  // 保存时运行 ESLint 修复 在保存时让 VS Code 调用 ESLint 的 fixAll
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // 注意：语言特定设置需要单独列出每个语言 key
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[less]": {
+    "editor.formatOnSave": false
+  }
+}

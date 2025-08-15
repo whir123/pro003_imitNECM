@@ -3,6 +3,8 @@
 
 // 引入 Node.js 的 path 模块，用于处理文件和目录路径
 const path = require('path');
+const CracoLessPlugin = require('craco-less'); // 通过这个插件，它会在 webpack 配置里自动添加对 .less 文件的解析规则（loader）
+
 // 定义一个 resolve 函数，传入相对路径 dir，返回以当前文件夹为起点的绝对路径
 const resolve = (dir) => path.resolve(__dirname, dir);
 
@@ -12,6 +14,7 @@ const resolve = (dir) => path.resolve(__dirname, dir);
 // 如 import xxx from '@/components/xxx'
 // 这边配置完 去 tsconfig.json 配置
 module.exports = {
+  plugins:[{ plugin: CracoLessPlugin }],
   webpack: {
     alias: {
       '@': resolve('src'),
